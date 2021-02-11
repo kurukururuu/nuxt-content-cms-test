@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Blog Posts</h1>
+    <h1 class="title">
+      Blog Posts
+    </h1>
     <ul>
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
@@ -31,7 +33,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;

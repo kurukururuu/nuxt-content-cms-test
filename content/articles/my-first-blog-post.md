@@ -1,6 +1,5 @@
 ---
-title: My first Bloga
- Post
+title: My first Blog Post
 description: Learning how to use @nuxt/content to create a blog
 img: /Rokka.jpg
 alt: my first blog post

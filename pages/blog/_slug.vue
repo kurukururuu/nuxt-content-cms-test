@@ -2,7 +2,9 @@
   <article>
     <AppSearchInput />
 
-    <h1>{{ article.title }}</h1>
+    <h1 class="title">
+      {{ article.title }}
+    </h1>
     <p>{{ article.description }}</p>
     <img :src="article.img" :alt="article.alt">
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>

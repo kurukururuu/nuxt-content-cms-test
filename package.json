@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
-    "test:e2e": "nightwatch"
+    "test:e2e": "nightwatch --env chrome"
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
@@ -30,6 +30,7 @@
     "nightwatch": "^1.5.1",
     "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
-    "sass-loader": "10"
+    "sass-loader": "10",
+    "selenium-server": "^3.141.59"
   }
 }
