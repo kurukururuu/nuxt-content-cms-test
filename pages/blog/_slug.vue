@@ -79,7 +79,7 @@ export default {
   }
 
   .icon.icon-link {
-    background-image: url('~assets/jpg/Rokka.jpg');
+    background-image: url('~assets/images/Rokka.jpg');
     display: inline-block;
     width: 20px;
     height: 20px;
