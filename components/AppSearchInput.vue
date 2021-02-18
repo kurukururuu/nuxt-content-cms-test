@@ -26,15 +26,21 @@ export default {
   },
   watch: {
     async searchQuery (searchQuery) {
-      if (!searchQuery) {
-        this.articles = []
-        return
-      }
+      // console.log('searchQuery:', searchQuery)
+      // if (!searchQuery) {
+      //   this.articles = []
+      //   return
+      // }
+      if (searchQuery.length < 3) { return }
+
       this.articles = await this.$content('articles')
         .limit(6)
         .search(searchQuery)
         .fetch()
     }
+  },
+  mounted () {
+    window.search = this
   }
 }
 </script>

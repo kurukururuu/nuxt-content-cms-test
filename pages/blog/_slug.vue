@@ -1,7 +1,5 @@
 <template>
   <article>
-    <AppSearchInput />
-
     <h1 class="title">
       {{ article.title }}
     </h1>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <AppSearchInput />
     <h1 class="title">
       Blog Posts
     </h1>
