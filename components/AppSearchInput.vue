@@ -1,18 +1,18 @@
 <template>
-  <div>
+  <div class="search-wrapper">
     <input
       v-model="searchQuery"
       type="search"
       autocomplete="off"
-      placeholder="Search Articles"
+      placeholder="Search (min 3 characters)"
     >
-    <ul v-if="articles.length">
+    <!-- <ul v-if="articles.length">
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
           {{ article.title }}
         </NuxtLink>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
     }
   },
   watch: {
-    async searchQuery (searchQuery) {
+    searchQuery (searchQuery) {
       // console.log('searchQuery:', searchQuery)
       // if (!searchQuery) {
       //   this.articles = []
@@ -33,10 +33,12 @@ export default {
       // }
       if (searchQuery.length < 3) { return }
 
-      this.articles = await this.$content('articles')
-        .limit(6)
-        .search(searchQuery)
-        .fetch()
+      this.$emit('keyword-changed', searchQuery)
+
+      // this.articles = await this.$content('articles')
+      //   .limit(6)
+      //   .search(searchQuery)
+      //   .fetch()
     }
   },
   mounted () {
@@ -44,3 +46,20 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.search-wrapper {
+  min-width: 300px;
+  input {
+    @apply outline-none;
+    @apply border-b border-gray-600;
+    @apply transition-colors duration-500 ease-in-out;
+    &:focus {
+      @apply border-b border-gray-800;
+    }
+    &::placeholder {
+      @apply text-sm;
+    }
+  }
+}
+</style>

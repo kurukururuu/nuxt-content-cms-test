@@ -47,18 +47,18 @@ export default {
 }
 
 .menu-container {
-  @apply flex items-center;
+  @apply flex items-center px-4;
 
   a {
     @apply text-2xl;
     &:hover,
-    &.nuxt-link-active {
+    &.nuxt-link-exact-active {
       @apply font-semibold;
     }
   }
 
   // second++ link will have left margin
-  a:nth-child(n+1) {
+  a:nth-child(n+2) {
     @apply ml-8;
   }
 }

@@ -9,6 +9,7 @@
 
 <style lang="scss" scoped>
 .page-wrapper {
-  padding-top: 75px;
+  padding-top: 91px;
+  @apply px-4 pb-4;
 }
 </style>
