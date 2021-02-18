@@ -1,9 +1,14 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="relative">
+    <BaseHeader />
+    <div class="page-wrapper">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
-<style>
-
+<style lang="scss" scoped>
+.page-wrapper {
+  padding-top: 75px;
+}
 </style>

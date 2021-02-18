@@ -29,9 +29,9 @@
       </template>
     </info-box>
 
-    <author :author="article.author" />
+    <Author :author="article.author" />
 
-    <prev-next :prev="prev" :next="next" />
+    <PrevNext :prev="prev" :next="next" />
   </article>
 </template>
 
