@@ -1,13 +1,13 @@
 ---
 title: My first Article test
+img: /images/67387855_841873622879801_2462002131696091136_n.jpg
+date: 2021-02-11T10:13:02.504Z
 description: Learning how to use @nuxt/content to create a blog
-img: /Rokka.jpg
 alt: my first blog post
 author:
   name: Benjamin
   bio: All about Benjamin
   image: https://source.unsplash.com/random/30x30
-date: 2021-02-11T10:13:02.504Z
 ---
 # My first blog post test
 
