@@ -4,17 +4,17 @@
       GALLERY
     </div>
     <div class="images-list">
-      <VuePictureSwipe :items="images" />
+      // <VuePictureSwipe :items="images" />
     </div>
   </div>
 </template>
 
 <script>
-import VuePictureSwipe from 'vue-picture-swipe'
+// import VuePictureSwipe from 'vue-picture-swipe'
 
 export default {
   components: {
-    VuePictureSwipe
+    // VuePictureSwipe
   },
   data () {
     return {
