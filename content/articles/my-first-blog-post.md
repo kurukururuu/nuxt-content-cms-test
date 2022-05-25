@@ -1,6 +1,6 @@
 ---
 title: My first Article test
-img: /images/67387855_841873622879801_2462002131696091136_n.jpg
+img: /images/Rokka.jpg
 date: 2021-02-11T10:13:02.504Z
 description: Learning how to use @nuxt/content to create a blog
 alt: my first blog post
