@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1 class="title">
-      Author: {{ articles[0].author.name }}
+      Author: {{ getAuthorName() }}
     </h1>
-    <p>Bio: {{ articles[0].author.bio }}</p>
-    <h3>Here are a list of articles by {{ getAuthorName }}:</h3>
+    <p>Bio: {{ getAuthorBio() }}</p>
+    <h3>Here are a list of articles by {{ getAuthorName() }}:</h3>
     <ul>
       <li v-for="article in articles" :key="article.slug">
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
@@ -46,7 +46,11 @@ export default {
       if (!this.articles[0]) return
       if (!this.articles[0].author) return
       return this.articles[0].author.name
-    }
-  }
+    },
+    getAuthorBio () {
+      if (!this.articles[0]) return
+      if (!this.articles[0].author) return
+      return this.articles[0].author.bio
+   }
 }
 </script>
