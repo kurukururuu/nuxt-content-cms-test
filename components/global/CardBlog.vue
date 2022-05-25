@@ -5,7 +5,7 @@
       <h2 class="text-lg font-semibold">
         {{ data.title }}
       </h2>
-      <p>by <b>{{ data.author.name }}</b></p>
+      <p>by <b>{{ data.author ? data.author.name : '-' }}</b></p>
       <p>{{ data.description }}</p>
     </div>
   </NuxtLink>
