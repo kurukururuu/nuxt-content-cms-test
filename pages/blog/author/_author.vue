@@ -51,6 +51,7 @@ export default {
       if (!this.articles[0]) return
       if (!this.articles[0].author) return
       return this.articles[0].author.bio
-   }
+    }
+  }
 }
 </script>
